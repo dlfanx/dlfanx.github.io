@@ -1,2 +1,2 @@
 # dlfanx.github.io
-Test, I just learning.
+My Dummy Personal Info
