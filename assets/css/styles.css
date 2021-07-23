@@ -10,6 +10,7 @@
 :root{
   --first-color: #6237A0;
   --second-color: #28104E;
+  --darkbg-color: #121212;
 }
 
 /*===== Fuente y tipografia =====*/
@@ -437,6 +438,20 @@ img{
   .contact__container{
     justify-items: center;
   }
+  
+}
+/* Typed.js */
+.typed {
+border-bottom: 2px solid #000000;
+}
+.typed-cursor{
+opacity: 1;
+animation: blink 0.7s infinite;
+}
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
 
 @media screen and (min-width: 1024px){
