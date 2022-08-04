@@ -2,7 +2,7 @@
 
 # About ME 💬 :
 
-### - I'm Indie Game Developer Enthusiast from Indonesia and I like Games.
+### - I'm a Game Developer Enthusiast from Indonesia and I like Games.
 
 ### - Learning :
 - ✨ Unity Engine
