@@ -226,7 +226,7 @@ img{
 .home__img{
   position: absolute;
   right: 0;
-  bottom: 5%;
+  bottom: 0;
   max-width: 80%;
 }
 .link__text{
@@ -339,7 +339,7 @@ img{
   }
   .home__img{
     width: 457px;
-    bottom: 0;
+    bottom: 5%;
   }
 
   .about__container{
