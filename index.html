@@ -1,117 +1,57 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
-    <title>
-        Home | dlfanx
-    </title>
-
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-
-<meta name="generator" content="Hugo 0.131.0">
-
-
-<link rel="canonical" href="https://dlfanx.github.io/" >
-  <link href="https://dlfanx.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Dlfanx&#39;s Simple Website" >
-  <link href="https://dlfanx.github.io/index.xml" rel="feed" type="application/rss+xml" title="Dlfanx&#39;s Simple Website" >
-
-
-
-
-<link href="/css/style.min.d23c1980faa61c0d6b331a0cd9dbc34fb7dade9e294067f1108fb8f26bd7796c.css" rel="stylesheet">
-
-
-
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="dlfanx" />
+    <title>dlfanx | Personal Website</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-
-    <div class="flexWrapper">
-        <header class="headerWrapper">
-    <div class="header">
-        <div>
-            <a class="terminal" href="https://dlfanx.github.io/">
-                <span>dlfanx.github.io ~ #</span>
-            </a>
-        </div>
-        <input class="side-menu" type="checkbox" id="side-menu">
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-        <nav class="headerLinks">
-            <ul>
-                
-                <li>
-                    <a href="https://dlfanx.github.io/about" title="" >
-                        ~/about</a>
-                </li>
-                
-                <li>
-                    <a href="https://dlfanx.github.io/blog" title="" >
-                        ~/blog</a>
-                </li>
-                
-            </ul>
-        </nav>
-    </div>
-</header>
-
-
-        <div class="content vertical">
-            <main class="main">
-                <div class="indexWrapper">
-                    <div>
-                        <h1 class="indexHeader">dlfanx</h1>
+    <div id="container">
+        <section class="section" id="home">
+            <div id="hero">
+                <h1>Welcome to My Personal Website</h1>
+                <p>I'm dlfanx, a game developer, designer, and programmer.</p>
+                <p>Explore my work, learn about my skills, and get in touch!</p>
+                <button class="glow-on-hover" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+                    Learn More
+                </button>
+            </div>
+            <div id="anime-girl">
+                <img src="images/anime-girl.jpg" alt="Ai Hoshino"/>
+                <p>Ai Hoshino</p>
+            </div>
+            <!-- Scroll down -->
+            <div class="mouse-animated">
+                <div class="scrolldown">
+                    <div class="chevrons">
+                        <div class="chevrondown"></div>
+                        <div class="chevrondown"></div>
                     </div>
-                    
-                        <div class="socialNavbar">
-    <ul>
-        
-        <li>
-            
-                <a href="https://github.com/dlfanx"  target="_blank"  aria-label="GitHub Profile"   >github</a>
-            
-        </li>
-        
-        <li>
-            
-                <a href="https://twitter.com/dlfanx"  target="_blank"  aria-label="Twitter Profile"   >twitter</a>
-            
-        </li>
-        
-        <li>
-            
-                <a href="https://www.linkedin.com/in/indra-delfanasa-231535247/"  target="_blank"  aria-label="LinkedIn Profile"   >linkedin</a>
-            
-        </li>
-        
-        <li>
-            
-                <a href="mailto:delfanasa@gmail.com"  >email</a>
-            
-        </li>
-        
-    </ul>
-</div>
-
-                    
                 </div>
-            </main>
-        </div>
-
-
-        <footer class="footer">
-    
-        <span>
-            © 2024 dlfanx, Built with
-            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
-            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
-        </span>
-    
-</footer>
+            </div>
+            <button class="glow-on-hover" id="goUpBtn" onclick="scrollToTop()">
+                ▲
+            </button>
+        </section>
+        <section class="section" id="about">
+            <h2>About</h2>
+            <p>Learn more about me and my background.</p>
+        </section>
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+            <p>Check out some of my recent work.</p>
+        </section>
+        <section class="section" id="contact">
+            <h2>Contact</h2>
+            <p>Get in touch with me.</p>
+        </section>
     </div>
-
+    <script src="js/main.js"></script>
+    </script>
 </body>
-
 </html>
