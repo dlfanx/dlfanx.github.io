@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
 
 html {
   scroll-snap-type: y mandatory;
   --s: 180px; /* control the size*/
   --c1: #2a2c2e;
   --c2: #17181c;
-
   --_g: #0000 90deg, var(--c1) 0;
   background: conic-gradient(from 90deg at 2px 2px, var(--_g)),
     conic-gradient(from 90deg at 1px 1px, var(--_g)), var(--c2);
@@ -17,14 +17,21 @@ body {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  margin: auto, 0, auto, 0;
+  margin: auto 0 auto 0;
   padding: 0;
+  font-size: 18px;
   height: 100vh;
   overflow-y: scroll;
 }
+
 * {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+p {
+  font-family: "Figtree", sans-serif;
+  font-size: 16px; /* Adjust the size as needed */
 }
 
 ::-webkit-scrollbar {
@@ -50,7 +57,6 @@ body {
 .mouse-animated {
   position: absolute;
   bottom: 5vh;
-
 }
 /* Scroll down */
 /* From Uiverse.io by mrhyddenn */
@@ -263,7 +269,7 @@ body {
 }
 
 #hero {
-margin-right: 50px;
+  margin-right: 50px;
 }
 
 #anime-girl {
@@ -271,8 +277,6 @@ margin-right: 50px;
 }
 
 #anime-girl img {
-  width: 400px;
-  height: 400px;
   border-radius: 50%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   position: relative;
@@ -282,10 +286,65 @@ margin-right: 50px;
   position: relative;
   opacity: 0;
   transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
 }
 
 #anime-girl:hover p {
   opacity: 1;
+  color: rgb(187, 92, 179);
   transform: translateY(0);
 }
+.square-strip {
+  width: 300px;
+  height: 50px;
+  background-image: repeating-linear-gradient(-135deg, transparent, transparent 25px, rgb(224,160,224) 25px, rgb(224,160,224) 50px);
+  -webkit-animation:progress 2s linear infinite;
+  -moz-animation:progress 2s linear infinite;
+  -ms-animation:progress 2s linear infinite;
+  animation:progress 2s linear infinite;
+  animation-play-state: paused;
+  background-size: 150% 100%;
+  filter: grayscale(1);
+  transition: filter 0.5s;
+}
+
+.square-strip:hover {
+  animation-play-state: running;
+  filter: grayscale(0);
+}
+
+@-webkit-keyframes progress{
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -75px 0px;
+  }
+}
+@-moz-keyframes progress{
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -75px 0px;
+  }
+}    
+@-ms-keyframes progress{
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -75px 0px;
+  }
+}    
+@keyframes progress{
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -70px 0px;
+  }
+} 
+
