@@ -43,6 +43,23 @@ h2 {
   font-size: 1.5rem; /* Adjust the size as needed */
   margin: 10px 0px;
 }
+
+.animebackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.animebackground img {
+  opacity: 0.1; /* Set the transparency to 0.1% */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and span the screen */
+}
+
 /* Hide Scrollbars */
 ::-webkit-scrollbar {
   width: 0px;
