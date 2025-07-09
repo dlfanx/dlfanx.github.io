@@ -5,13 +5,12 @@
 /* Global Styles */
 html {
   scroll-snap-type: y mandatory;
-  --s: 180px; /* control the size */
+  --size: 180px; /* control the size */
   --c1: #2a2c2e;
   --c2: #17181c;
   --_g: #0000 90deg, var(--c1) 0;
-  background: conic-gradient(from 90deg at 2px 2px, var(--_g)),
-    conic-gradient(from 90deg at 1px 1px, var(--_g)), var(--c2);
-  background-size: var(--s) var(--s), calc(var(--s) / 5) calc(var(--s) / 5);
+  background: conic-gradient(from 90deg at 1px 1px, var(--_g)), var(--c2);
+  background-size: var(--size) var(--size), calc(var(--size) / 5) calc(var(--size) / 5);
 }
 
 body {
@@ -24,6 +23,7 @@ body {
   font-size: 18px;
   height: 100vh;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -210,26 +210,11 @@ h2 {
   width: var(--sizeX);
   height: var(--sizeY);
   margin-left: var(sizeX / 2);
-  border: calc(var(--sizeX) / 10) solid var(--color);
+  margin-left: calc(var(--sizeX) / 2);
   border-radius: 50px;
   box-sizing: border-box;
   margin-bottom: 16px;
   cursor: pointer;
-}
-
-.scrolldown::before {
-  content: "";
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  width: 6px;
-  height: 6px;
-  margin-left: -3px;
-  background-color: var(--color);
-  border-radius: 100%;
-  animation: scrolldown-anim 2s infinite;
-  box-sizing: border-box;
-  box-shadow: 0px -5px 3px 1px #2a547066;
 }
 
 @keyframes scrolldown-anim {
@@ -386,6 +371,11 @@ h2 {
 }
 
 /* ABOUT-SECTION */
+.shared-border {
+  border: 2px solid #2a2c2e;
+  border-radius: 12px;
+}
+
 .about-container {
   margin-right: 50px;
   position: relative;
@@ -410,15 +400,20 @@ h2 {
   overflow: hidden;
   width: 18em;
   height: 28em;
-  border-radius: 12px;
-  border: 2px solid #2a2c2e;
+  @extend .shared-border;
   transition: 400ms transform ease-out;
+}
+
+/* Define named variables for radial-gradient colors */
+:root {
+  --gradient-color1: rgba(153, 153, 153, 0.329);
+  --gradient-color2: rgba(185, 226, 250, 0.568);
 }
 
 .cursive {
   width: 25em;
   height: 25em;
-  background: radial-gradient(rgba(153, 153, 153, 0.329), rgba(185, 226, 250, 0.568));
+  background: radial-gradient(var(--gradient-color1), var(--gradient-color2));
   border-radius: 50%;
   display: none;
   position: absolute;
@@ -427,8 +422,8 @@ h2 {
 }
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
-  gap: 1em;
+  @extend .shared-border;
+  border-radius: 12px;
   margin-top: 1em;
   margin-left: 3em;
 }
@@ -440,4 +435,62 @@ h2 {
   padding: 1em;
   justify-content: center;
   align-items: center;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  html {
+    --size: 120px; /* Adjust size for smaller screens */
+  }
+
+  body {
+    font-size: 16px; /* Adjust font size for readability */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Adjust heading size */
+  }
+
+  h2 {
+    font-size: 1.3rem; /* Adjust heading size */
+  }
+
+  .section {
+    flex-direction: column; /* Stack content vertically */
+    padding: 20px; /* Add padding for spacing */
+  }
+
+  #home {
+    flex-direction: column; /* Stack home section content */
+    align-items: center;
+  }
+
+  #hero, #anime-girl {
+    margin: 0;
+    margin-top: 30px; /* Remove margins for better alignment */
+  }
+
+  #anime-girl img {
+    width: 80%; /* Scale image for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    margin-left: 0; /* Remove left margin for smaller screens */
+  }
+  .card {
+    margin: 10px; /* Add margin for spacing */
+    width: 90%; /* Scale cards for smaller screens */
+    padding: 0%;
+  }
+  .about-container {
+    margin-right: 0; /* Remove right margin for smaller screens */
+    align-items: center; /* Center content */
+    text-align: center; /* Center text */
+  }
+  .about-img-wrapper {
+    margin-right: 0; /* Remove right margin for smaller screens */
+    justify-content: center; /* Center the image */
+  }
+
 }
