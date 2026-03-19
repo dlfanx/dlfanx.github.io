@@ -1,21 +1,22 @@
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Global Styles */
 html {
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
   --size: 180px; /* control the size */
-  --c1: #2a2c2e;
-  --c2: #17181c;
+  --c1: #b4b4b9;
+  --c2: #e7e7e7;
   --_g: #0000 90deg, var(--c1) 0;
   background: conic-gradient(from 90deg at 1px 1px, var(--_g)), var(--c2);
   background-size: var(--size) var(--size), calc(var(--size) / 5) calc(var(--size) / 5);
 }
 
 body {
-  color: #eae9f0;
-  font-family: "Playfair Display", serif;
+  color: #000000;
+  font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   font-style: normal;
   margin: auto 0 auto 0;
@@ -32,7 +33,7 @@ body {
 }
 
 p {
-  font-family: "Figtree", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px; /* Adjust the size as needed */
 }
  h1 {
@@ -78,7 +79,7 @@ h2 {
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  color: rgb(235, 236, 241);
+  color: rgb(29, 29, 29);
   scroll-snap-align: start;
 }
 
@@ -117,17 +118,16 @@ h2 {
 
 /* Glow Button */
 .glow-on-hover {
-  width: 220px;
+  width: 200px;
   height: 50px;
   border: none;
   outline: none;
   color: #fff;
   background: #111;
-  margin: 19px;
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 10px;
+
 }
 
 .glow-on-hover:before {
@@ -179,7 +179,6 @@ h2 {
   background: #111;
   left: 0;
   top: 0;
-  border-radius: 10px;
 }
 
 @keyframes glowing {
