@@ -436,6 +436,39 @@ h2 {
   align-items: center;
 }
 
+#footer {
+  position: relative;
+  bottom: 2px;
+  width: 100%;
+  background-color: rgba(50, 50, 50, 0.8);
+  color: white;
+  font-size: 12px;
+}
+
+/* ONE ROW FLEX */
+.footer-row {
+  display: flex;
+  justify-content: space-between; /* push left & right */
+  align-items: center;
+  padding: 20px 30px; /* THIS = margin from edges */
+}
+
+/* Social links */
+.socials a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.socials a:hover {
+  opacity: 0.6;
+}
+
+/* Right side */
+.copyright {
+  text-align: right;
+}
+
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
   html {
@@ -491,5 +524,23 @@ h2 {
     margin-right: 0; /* Remove right margin for smaller screens */
     justify-content: center; /* Center the image */
   }
+  #footer {
+    position: relative;
+    bottom: 2px;
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.8);
+    color: white;
+    font-size: 12px;
+}
+
+.footer-row {
+  flex-direction: column;
+  align-items: flex-start; /* align left */
+}
+
+.copyright {
+  text-align: left;
+  margin-top: 5px;
+}
 
 }
