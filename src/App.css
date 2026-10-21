@@ -23,7 +23,7 @@
       rgba(16, 13, 24, 0.94),
       rgba(16, 13, 24, 0.78)
     ),
-    url("/images/aigeneratedbackground.jpg")
+    url("/images/aigeneratedbackground.webp")
       center / cover no-repeat;
 }
 

@@ -43,7 +43,7 @@ function Hero() {
         <div className="character-card">
           <div className="character-image">
             <img
-              src="/images/anime-girl.png"
+              src="/images/anime-girl.webp"
               alt="Hu Tao"
             />
           </div>
