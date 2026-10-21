@@ -5,6 +5,23 @@ import DecayCard from "./components/DecayCard/DecayCard";
 import TechText from "./components/TechText/TechText";
 
 function Hero() {
+  const [isMobile, setIsMobile] = useState(
+    () => window.matchMedia("(max-width: 768px)").matches
+  );
+  
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 768px)");
+  
+    const handleChange = (event) => {
+      setIsMobile(event.matches);
+    };
+  
+    media.addEventListener("change", handleChange);
+  
+    return () => {
+      media.removeEventListener("change", handleChange);
+    };
+  }, []);
   return (
     <main className="hero" id="home">
       <div className="hero-background" aria-hidden="true" />
@@ -40,7 +57,7 @@ function Hero() {
       selection
       labels
       color="#c5a5ff"
-      align="left"
+      align={isMobile ? "center" : "left"}
       draggable
       sweep
     />
